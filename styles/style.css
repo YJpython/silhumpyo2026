@@ -1,0 +1,156 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;}
+body{
+    font-family: 'Presentation', sans-serif;
+    background:black;
+    color:#000000;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+.wrap{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    gap:1.2rem;
+    padding:3vh 4vw;
+}
+
+.heading{
+    width:100%;
+    height:6vh;
+    background:#363636;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:20px;
+    padding:0 10px
+}
+    .heading a{
+    font-size:1rem;
+    color:#d9aaff;
+    }
+    .heading p{
+        font-size:1rem;
+        color:#d0d0d0;
+    }
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+    /* applications */
+iframe{
+    max-width: 800px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:center;
+    margin-left: auto;
+    gap:40px;
+    padding:15px;
+}
+
+    /* img, mainpage */
+.hero{
+    width:min(380px,92%);
+    height:30vh;
+    object-fit:cover;
+    background:#e6eefc;
+}
+
+    /* all */
+.lead{
+    text-align:center;
+    line-height:1.25;
+    margin-top:0.6rem;
+}
+    .lead h1{
+        color:#c35cff;
+        font-size:2.0rem;
+        font-weight:700;
+        margin-bottom:0.25rem;
+    }
+    .lead p{
+      font-size:1.5rem;
+      color:#a2a2a2;
+    }
+    .lead h5{
+        color: #f5e6fc;
+        font-size: 1.7rem;
+    }
+
+    /* mainpage */
+.cards-wrap{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    margin:top 0;
+}
+
+    .card{
+      flex:1 1 0px;
+      min-width:0; 
+      max-width:320px;
+      height:30vh; 
+      background:#ae00ff;
+      border-radius:3px;
+      padding:1.1rem;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      text-align:center;
+    }
+
+    .card h3{
+        font-family: 'RoundedFixedsys', sans-serif;
+        font-size:3rem;
+        margin-bottom:0.6rem;
+    }
+    .card p{
+      flex:1 1 auto;
+      font-size:1.35rem;
+      color:#363636;
+      margin-bottom:1rem;
+    }
+
+    .card .btn{
+      display:inline-block;
+      text-decoration:none;
+      padding:1rem 1.5rem;
+      border-radius:100px;
+      background:#212121;
+      font-weight:600;
+      cursor:pointer;
+      text-align:center;
+      transition:transform .14s ease, box-shadow .14s ease;
+      align-self:flex-end;
+      color:#d9aaff;
+      font-size:1.3rem;
+    }
+    .card .btn:active{transform:translateY(1px)}
+
+    /* 반응형: 좁은 화면에서는 카드들이 세로로 쌓임 */
+@media (max-width:880px){
+    .cards-wrap{flex-direction:column;align-items:center;gap:0.9rem}
+    .card{width:92%;max-width:none}
+    .hero{height:22vh}
+    .lead h1{font-size:1.6rem}
+}
+@font-face {
+    font-family: 'RoundedFixedsys';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Presentation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
